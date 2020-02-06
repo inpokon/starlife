@@ -1,6 +1,6 @@
 .main {
 	position: relative;
-	padding-bottom: 280px;
+	padding-bottom: 300px;
 	&-title {
 		display: none;
 		margin: 0 0 0 150px;
@@ -13,26 +13,30 @@
 .grid {
 	display: flex;
 	margin: 0 auto;
-	width: 1600px;
+	width: 100%;
+	padding: 0 140px;
+	&--header {
+		justify-content: space-between;
+	}
 }
 
 .pictures-box {
 	width: 47%;
 }
 .girl-pic {
-	position: absolute;
+	position: relative;
+	transform: translate(41px, 100px);
+	z-index: 1;
 	left: 0;
 	top: 10%;
-	z-index: -1;
 	img{
 		width: 80%;
 	}
 }
 .main-desc {
-	margin-top: 60px;
-	width: 44%;
+	margin: 66px 0 0 62px;
+	width: 46%;
 	&__title {
-		margin-bottom: 50px;
 		color: $color-two;
 		span {
 			position: relative;
@@ -52,7 +56,8 @@
 	}
 	&__par {
 		margin-bottom: 42px;
-		font-family: "Open Sans", sans-serif;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
 		line-height: initial;
 	}
 	&__btn {
@@ -93,20 +98,21 @@
 .info-text {
 	margin-top: 100px;
 	font-family: "OpenSans", sans-serif;
-	font-size: 40px;
+	font-size: 18px;
 	font-weight: bold;
 	color: $color-two;
 }
 .block-title {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin: 25px 0 35px 0;
 }
 .map-box {
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	z-index: -1;
+	transform: translateY(-100px);
 	width: 100%;
 	height: 700px;
 	svg {
@@ -114,6 +120,7 @@
 		height: 100%;
 		g {
 			width: 100%;
+			transform: translateX(-100px);
 		}
 	}
 }
